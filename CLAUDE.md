@@ -246,13 +246,19 @@ Design for it cleanly, but keep MVP focused.
 - Keep view files readable
 - Add comments only where they clarify intent
 
+## Before Every Message
+1. Read the memory index at `~/.claude/projects/-Users-varunscodingaccount-Desktop-Swift-projects-arlo-trading-engine/memory/MEMORY.md` for user context and prior decisions
+2. Check the current plan file if one exists
+3. Review git status and recent commits to understand current state
+
 ## Working Style
 When asked to implement something:
 1. inspect existing code
 2. explain the plan briefly
 3. implement in small steps
-4. verify by building/testing where possible
-5. summarize what changed and what remains
+4. after completing non-trivial changes, use a sub-agent (Explore type) to verify the changes compile, make sense architecturally, and don't break existing patterns before presenting results
+5. verify by building/testing where possible
+6. summarize what changed and what remains
 
 ## What to Avoid
 - giant one-shot rewrites
